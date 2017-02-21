@@ -1,6 +1,6 @@
-# CCValidator
+# CCValidator 💳💰💻
 
-[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=&branch=master&build=latest)](https://dashboard.buddybuild.com/apps//build/latest?branch=master)
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=58ac50fb4ad7d401004cd555&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/58ac50fb4ad7d401004cd555/build/latest?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/CCValidator.svg?style=flat)](http://cocoapods.org/pods/CCValidator)
 [![License](https://img.shields.io/cocoapods/l/CCValidator.svg?style=flat)](http://cocoapods.org/pods/CCValidator)
 [![Platform](https://img.shields.io/cocoapods/p/CCValidator.svg?style=flat)](http://cocoapods.org/pods/CCValidator)

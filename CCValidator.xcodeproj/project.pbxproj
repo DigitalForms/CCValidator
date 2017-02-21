@@ -11,10 +11,8 @@
 		E511CE831E5C8192000FEB26 /* CCValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CE7C1E5C8192000FEB26 /* CCValidator.swift */; };
 		E511CE841E5C8192000FEB26 /* CreditCardPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CE7D1E5C8192000FEB26 /* CreditCardPrefix.swift */; };
 		E511CE851E5C8192000FEB26 /* String+RemoveCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CE7E1E5C8192000FEB26 /* String+RemoveCharacters.swift */; };
-		E511CE861E5C8192000FEB26 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E511CE7F1E5C8192000FEB26 /* Info.plist */; };
 		E511CE911E5C82C0000FEB26 /* CCValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E511CE5F1E5C8136000FEB26 /* CCValidator.framework */; };
 		E511CE971E5C82C8000FEB26 /* TestCCValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* TestCCValidator.swift */; };
-		E511CE981E5C834E000FEB26 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 607FACEA1AFB9204008FA782 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,7 +230,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E511CE861E5C8192000FEB26 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +237,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E511CE981E5C834E000FEB26 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +466,7 @@
 				E511CE651E5C8136000FEB26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E511CE941E5C82C0000FEB26 /* Build configuration list for PBXNativeTarget "CCValidator Tests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +475,7 @@
 				E511CE961E5C82C0000FEB26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
