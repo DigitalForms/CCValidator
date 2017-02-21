@@ -17,7 +17,7 @@ Plus, ability to detect possible card type even from only first digit, lets you 
 
 ## Example
 
-This pod doesn't contain example run, but all the tests should show you how to use it properly. 
+This pod doesn't contain example app, but all the tests should show you how to use it properly. 
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
