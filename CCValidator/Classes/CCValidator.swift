@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// `CreditCardType` is the credit card type name, used to name specific
+/// real-life card type
 @objc public enum CreditCardType: Int {
     case AmericanExpress
     case Dankort
@@ -22,16 +24,39 @@ import Foundation
     case NotRecognized
 }
 
+/// Specific instance of CCValidator, that validates credit card type with given
+/// set of prefixes and card number lengths
 public class CCValidator: NSObject {
+    
+    /// Array of prefixes describing credit card type. E.g. Visa prefix is just number `4`
+    /// and the prefix is of length 1 (i.e. we check only first digit when
+    /// looking for prefix)
     public let prefixes: [CreditCardPrefix]
+    
+    /// Array of possible lengths of a credit card type. E.g. Visa can have 13,
+    /// 16 or 19 digits, whereas MasterCard can be only 16 digits.
     public let lengths: [Int]
     
+    /// Initialize new CCValidator instance with given set of prefixes and 
+    /// card lengths
+    ///
+    /// - Parameters:
+    ///   - prefixes: Array of prefixes describing given card type
+    ///   - lengths: Array of lengths describing given card type
     public init(prefixes: [CreditCardPrefix], lengths: [Int]) {
         self.prefixes = prefixes
         self.lengths = lengths
     }
     
+    /// Initialize new CCValidator instance with given credit card type.
+    /// We recommend you use this class, as this way you won't have to know
+    /// the specification details for supported credit card types.
+    ///
+    /// - Parameter type: Credit Card Type. Passing `.NotRecognized` will not
+    ///                     throw an error, but will create a validator
+    ///                     with empty arrays of prefixes and lengths
     public convenience init(type: CreditCardType) {
+        // default specs
         var specs: (prefixes: [CreditCardPrefix], lengths:[Int]) = ([], [])
         switch type {
         case .AmericanExpress:
@@ -56,7 +81,8 @@ public class CCValidator: NSObject {
             specs = CCValidator.visaElectronSpecs()
         case .NotRecognized:
             // This does nothing, added only to have exhaustive switch case
-            // without using default case
+            // without using default case - so we get compiler error 
+            // when add a new credit card type and we won't handle it here
             break
         }
         self.init(prefixes: specs.prefixes, lengths: specs.lengths)

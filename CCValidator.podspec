@@ -11,10 +11,8 @@ s.name             = 'CCValidator'
 s.version          = '1.0.0'
 s.summary          = 'CCValidator helps you validate credit card type and numbers correctness.'
 
-s.description      = 'You can use our validator to check credit card type (full number not needed!)
-and to check if the numbers are correct using Luhn algorithm.
-We wrote it for quick validation of credit card type while writing, before having
-to wait for user to give full card number.'
+s.description      = 'Check credit card type (full number not needed!)
+                      and to check if the numbers are correct using Luhn algorithm.'
 
 s.homepage         = 'https://github.com/DigitalForms/CCValidator'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
