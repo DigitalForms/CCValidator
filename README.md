@@ -17,7 +17,7 @@ Plus, ability to detect possible card type even from only first digit, lets you 
 
 ## Example
 
-This pod doesn't contain example app, but all the tests should show you how to use it properly. 
+This pod doesn't contain an example app, but [tests](https://github.com/DigitalForms/CCValidator/blob/master/Tests/TestCCValidator.swift) should show you how to use it properly. 
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
@@ -27,11 +27,15 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 To get type from card prefix, pass credit card input you have (can be as short as 1 character string). Validator will check it against all types it knows and return recognized type, or .`NotRecognized`.
 
+**Obj-C:**
+
 ```objc
 NSString *numberAsString = textField.text;
 CreditCardType creditCardType = [CCValidator typeCheckingPrefixOnlyWithCreditCardNumber:cardNumber];
 //check if type is e.g. CreditCardTypeVisa, CreditCardTypeMasterCard or CreditCardTypeNotRecognized
 ```
+**Swift:**
+
 ```swift
 let numberAsString = textField.text
 let recognizedType = CCValidator.typeCheckingPrefixOnly(creditCardNumber: numberAsString)
@@ -44,10 +48,15 @@ You can also validate length and type -- e.g. if validator recognizes card as Ma
 
 Next to that, it also validates card number using Luhn algorithm -- this way you can pass to your payment processor only cards that numbers look like correct ones.
 
+**Obj-C:**
+
 ```objc
 NSString *numberAsString = textField.text;
 BOOL isFullCardDataOK = [CCValidator validateWithCreditCardNumber:numberAsString];
 ```
+
+**Swift:**
+
 ```swift
 let numberAsString = textField.text
 let isFullCardDataOK = CCValidator.validate(creditCardNumber: numberAsString)
@@ -68,8 +77,7 @@ pod "CCValidator"
 
 ## Author
 
-Mariusz Wisniewski</br>
-Digital Forms
+Mariusz Wisniewski, [Digital Forms](http://www.digitalforms.pl)
 
 ## License
 
@@ -77,5 +85,7 @@ CCValidator is available under the MIT license. See the LICENSE file for more in
 
 ## Version history
 
+* **1.0.1** - 2017/02/22
+	* Updated documentation 
 * **1.0.0** - 2017/02/21
    * Initial version of the library 
