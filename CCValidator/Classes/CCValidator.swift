@@ -216,7 +216,7 @@ public extension CCValidator {
     }
     
     private class func validateWithLuhnAlgorithm(creditCardNumber number: String) -> Bool {
-        guard let _ = Int(number) else {
+        guard let _ = Int64(number) else {
             //if string is not convertible to int, return false
             return false
         }
