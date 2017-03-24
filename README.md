@@ -85,6 +85,8 @@ CCValidator is available under the MIT license. See the LICENSE file for more in
 
 ## Version history
 
+* **1.0.2** - 2017/03/24
+   * Fix for iPhone 4S (thanks [@jessearmand](https://github.com/jessearmand)!) 
 * **1.0.1** - 2017/02/22
 	* Updated documentation 
 * **1.0.0** - 2017/02/21
