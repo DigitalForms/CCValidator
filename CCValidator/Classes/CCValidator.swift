@@ -183,9 +183,9 @@ public extension CCValidator {
     private func validatePrefixSpecs(creditCardNumber number: String) -> Bool {
         var validationPassed = false
         for prefix in self.prefixes {
-            if number.characters.count >= prefix.prefixLength {
+            if number.count >= prefix.prefixLength {
                 let prefixEndIndex = number.index(number.startIndex, offsetBy: prefix.prefixLength)
-                let numberPrefix = number.substring(to: prefixEndIndex)
+                let numberPrefix = number[..<prefixEndIndex]
                 if let number = Int(numberPrefix), number >= prefix.rangeStart, number <= prefix.rangeEnd {
                     validationPassed = true
                     break
@@ -197,7 +197,7 @@ public extension CCValidator {
     
     private func validateLengthSpecs(creditCardNumber number: String) -> Bool {
         var validationPassed = false
-        if self.lengths.contains(number.characters.count) {
+        if self.lengths.contains(number.count) {
             validationPassed = true
         }
         return validationPassed
@@ -220,10 +220,10 @@ public extension CCValidator {
             //if string is not convertible to int, return false
             return false
         }
-        let numberOfChars = number.characters.count
+        let numberOfChars = number.count
         let numberToCheck = numberOfChars % 2 == 0 ? number : "0" + number
         
-        let digits = numberToCheck.characters.map { Int(String($0)) }
+        let digits = numberToCheck.map { Int(String($0)) }
         
         let sum = digits.enumerated().reduce(0) { (sum, val: (offset: Int, element: Int?)) in
             if (val.offset + 1) % 2 == 1 {
