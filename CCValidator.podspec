@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'CCValidator'
-s.version          = '1.1.0'
+s.version          = '1.2.0'
 s.summary          = 'CCValidator helps you validate credit card type and numbers correctness.'
 
 s.description      = 'Check credit card type (full number not needed!)
