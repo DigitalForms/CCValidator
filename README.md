@@ -85,9 +85,13 @@ CCValidator is available under the MIT license. See the LICENSE file for more in
 
 ## Version history
 
+* **1.2.0** - 2020/04/03
+    * Update for Swift 5 (thanks [@maetschl](https://github.com/maetschl)!) 
+* **1.1.0** - 2019/09/27
+    * Update for Swift 4.2 (thanks [@jessearmand](https://github.com/jessearmand)!) 
 * **1.0.2** - 2017/03/24
-   * Fix for iPhone 4S (thanks [@jessearmand](https://github.com/jessearmand)!) 
+* Fix for iPhone 4S (thanks [@jessearmand](https://github.com/jessearmand)!) 
 * **1.0.1** - 2017/02/22
-	* Updated documentation 
+    * Updated documentation 
 * **1.0.0** - 2017/02/21
-   * Initial version of the library 
+    * Initial version of the library 

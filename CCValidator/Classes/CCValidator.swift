@@ -260,7 +260,7 @@ public extension CCValidator {
     /// - Parameters:
     ///   - number: Credit Card number
     /// - Returns: Credit Card Type, or `.NotRecognized` if failed to recognize the type
-    public class func typeCheckingPrefixOnly(creditCardNumber number: String) -> CreditCardType {
+    class func typeCheckingPrefixOnly(creditCardNumber number: String) -> CreditCardType {
         return self.typeCheckingPrefixOnly(creditCardNumber: number, checkOnlyFromTypes: self.allTypes())
     }
     
@@ -274,7 +274,7 @@ public extension CCValidator {
     ///   - number: Credit Card number
     ///   - types: Types of Credit Card to check (if you don't need to check all possible answers)
     /// - Returns: Credit Card Type, or `.NotRecognized` if failed to recognize the type
-    public class func typeCheckingPrefixOnly(creditCardNumber number: String, checkOnlyFromTypes types:[CreditCardType]) -> CreditCardType {
+    class func typeCheckingPrefixOnly(creditCardNumber number: String, checkOnlyFromTypes types:[CreditCardType]) -> CreditCardType {
         var type: CreditCardType = .NotRecognized
         let number = number.removingWhitespaceAndNewlines()
         
@@ -293,7 +293,7 @@ public extension CCValidator {
     /// plus validating number using Luhn algorithm.
     ///
     /// - Returns: `true` if validation was passed, `false` otherwise
-    public class func validate(creditCardNumber number: String) -> Bool {
+    class func validate(creditCardNumber number: String) -> Bool {
         return self.validate(creditCardNumber: number,
                              validatePrefix: true,
                              validateLength: true,
@@ -315,7 +315,7 @@ public extension CCValidator {
     ///   - validateLength: `true` if we should validate card length
     ///   - useLuhn: `true` if we should check number using Luhn algorithm
     /// - Returns: `true` if validation was passed, `false` otherwise
-    public class func validate(creditCardNumber number: String,
+    class func validate(creditCardNumber number: String,
                                validatePrefix: Bool,
                                validateLength: Bool, useLuhnAlgorithm useLuhn: Bool) -> Bool {
         let number = number.removingWhitespaceAndNewlines()
